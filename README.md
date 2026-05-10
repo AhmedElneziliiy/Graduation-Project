@@ -1,10 +1,6 @@
 # Graduation Project — Social Platform API
 
-An **ASP.NET Core Web API** serving as the backend of a graduation project social platform — with real-time messaging via SignalR, JWT authentication, user profiles, photo management, and a threading/gallery system.
-
-## What it does
-
-A social networking backend built for a graduation project. Users can register, build profiles with photos, send real-time messages, and interact through threads and galleries. SignalR powers live presence and messaging features.
+An **ASP.NET Core Web API** serving as the backend of a social platform graduation project — with real-time messaging via SignalR, JWT authentication, user profiles, photo management, and a threading/gallery system.
 
 ## Tech Stack
 
@@ -30,8 +26,5 @@ A social networking backend built for a graduation project. Users can register, 
    - SQL Server connection string
    - JWT secret key
    - Cloudinary credentials (`CloudName`, `ApiKey`, `ApiSecret`)
-2. Apply migrations and seed data:
-   ```bash
-   dotnet ef database update
-   dotnet run
-   ```
+2. Apply migrations: `dotnet ef database update`
+3. Run: `dotnet run`
