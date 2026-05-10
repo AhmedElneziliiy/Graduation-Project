@@ -1,33 +1,37 @@
-# Graduation_Project
+# Graduation Project — Social Platform API
 
-Getting Started
-To use this project, please follow the steps below:
+An **ASP.NET Core Web API** serving as the backend of a graduation project social platform — with real-time messaging via SignalR, JWT authentication, user profiles, photo management, and a threading/gallery system.
 
-1- Change the connection string in the appsettings.json file located in the root of the project.
-    Replace the value of the DefaultConnection key with the connection string for your database.
-    
-3-Update the Cloudinary settings in the same appsettings.json file.
-    Replace the CloudName, ApiKey, and ApiSecret values with your own Cloudinary API credentials.
-    
-"
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=MyDatabase;Trusted_Connection=True;MultipleActiveResultSets=true"
-  },
-  "CloudinarySettings": {
-    "CloudName": "your-cloud-name",
-    "ApiKey": "your-api-key",
-    "ApiSecret": "your-api-secret"
-  },
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft": "Warning",
-      "Microsoft.Hosting.Lifetime": "Information"
-    }
-  }
-}"
+## What it does
 
-3- Open the Package Manager Console in Visual Studio by going to Tools > NuGet Package Manager > Package Manager Console.
+A social networking backend built for a graduation project. Users can register, build profiles with photos, send real-time messages, and interact through threads and galleries. SignalR powers live presence and messaging features.
 
-4- Run the command update-database in the Package Manager Console to create the database schema.
+## Tech Stack
+
+- **ASP.NET Core Web API** (.NET)
+- **Entity Framework Core** — SQL Server
+- **ASP.NET Identity** — JWT authentication with roles
+- **SignalR** — presence hub and message hub for real-time communication
+- **Cloudinary** — photo storage
+- **AutoMapper**
+
+## Key Features
+
+- User registration and JWT-based login
+- Member profiles with photo galleries
+- Real-time private messaging (SignalR `MessageHub`)
+- Online presence tracking (SignalR `PresenceHub`)
+- Thread system for user interactions
+- Admin and Moderator role support
+
+## Getting Started
+
+1. Update `appsettings.json` with:
+   - SQL Server connection string
+   - JWT secret key
+   - Cloudinary credentials (`CloudName`, `ApiKey`, `ApiSecret`)
+2. Apply migrations and seed data:
+   ```bash
+   dotnet ef database update
+   dotnet run
+   ```
